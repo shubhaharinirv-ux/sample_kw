@@ -1,0 +1,24 @@
+# Dependency directories
+shubha_project1/node_modules/
+
+# Build outputs
+shubha_project1/dist/
+
+# Vite temporary files
+shubha_project1/vite.config.ts.timestamp-*
+
+# Local env files
+shubha_project1/.env
+shubha_project1/.env.local
+shubha_project1/.env.*.local
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db

@@ -1,0 +1,80 @@
+@import "react-toastify/dist/ReactToastify.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Kalai Toast ─────────────────────────────────────────────── */
+.kalai-toast.Toastify__toast {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.10);
+  padding: 14px 16px;
+  min-height: unset;
+  width: 320px;
+}
+
+.kalai-toast .kalai-toast__body {
+  padding: 0;
+  margin: 0;
+  align-items: flex-start;
+}
+
+.kalai-toast .Toastify__close-button {
+  color: #9ca3af;
+  opacity: 1;
+  align-self: flex-start;
+  margin-top: 1px;
+}
+.kalai-toast .Toastify__close-button:hover {
+  color: #374151;
+}
+
+.kalai-toast .Toastify__progress-bar {
+  height: 2px;
+  border-radius: 0 0 10px 10px;
+}
+.kalai-toast.Toastify__toast--success .Toastify__progress-bar {
+  background: #22c55e;
+}
+.kalai-toast.Toastify__toast--error .Toastify__progress-bar {
+  background: #ef4444;
+}
+.kalai-toast.Toastify__toast--default .Toastify__progress-bar {
+  background: #6b7280;
+}
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}

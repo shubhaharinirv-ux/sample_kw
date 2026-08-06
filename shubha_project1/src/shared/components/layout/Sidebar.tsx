@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Globe, Settings, User, LogOut } from "lucide-react";
+import { Globe, Settings, User, LogOut, Calculator } from "lucide-react";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "@/features/auth/context/AuthProvider";
@@ -9,7 +9,7 @@ interface SidebarProps {
   onSelect: (id: SidebarItem) => void;
 }
 
-type SidebarItem = "Assets" | "Settings" | "Profile";
+type SidebarItem = "Assets" | "Settings" | "Profile" | "Calculator";
 
 interface NavItem {
   id: SidebarItem;
@@ -28,10 +28,12 @@ export default function Sidebar({ onSelect }: SidebarProps) {
     if (location.pathname.startsWith("/library")) setActive("Assets");
     else if (location.pathname.startsWith("/settings")) setActive("Settings");
     else if (location.pathname.startsWith("/profile")) setActive("Profile");
+    else if (location.pathname.startsWith("/calculator")) setActive("Calculator");
   }, [location.pathname]);
 
   const topItems: NavItem[] = [
     { id: "Assets", label: "Browse", icon: Globe },
+    { id: "Calculator", label: "Calculator", icon: Calculator },
   ];
 
   const bottomItems: NavItem[] = [
@@ -53,7 +55,9 @@ export default function Sidebar({ onSelect }: SidebarProps) {
       case "Profile":
         navigate("/profile");
         break;
-
+      case "Calculator":
+        navigate("/calculator");
+        break;
     }
   };
 

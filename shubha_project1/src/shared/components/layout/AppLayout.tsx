@@ -3,10 +3,10 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 
 // Define type for the sidebar items
-type SidebarItem = "Assets" | "Settings" | "Profile";
+type SidebarItem = "Assets" | "Settings" | "Profile" | "Calculator";
 
 const AppLayout: React.FC = () => {
-  const handleSelect = () => {
+  const handleSelect = (_id: SidebarItem) => {
     // Items handled by sidebar internally for navigation
   };
 

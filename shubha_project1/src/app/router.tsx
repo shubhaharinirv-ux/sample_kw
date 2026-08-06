@@ -13,6 +13,9 @@ import ManageBrandsPage from "@/features/settings/pages/ManageBrandsPage";
 // PROFILE
 import ProfilePage from "@/features/profile/pages/ProfilePage";
 
+// CALCULATOR
+import CalculatorPage from "@/features/calculator/pages/CalculatorPage";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +38,9 @@ const router = createBrowserRouter([
 
       // Profile
       { path: "profile", element: <ProfilePage /> },
+
+      // Calculator
+      { path: "calculator", element: <CalculatorPage /> },
 
       // Settings
       {
